@@ -93,7 +93,7 @@ tiresome-part-production.up.railway.app
 I have been using Swagger to document API in Spring project and it worked pretty well.
 ### How to run
 ```
-https://tiresome-part-production.up.railway.app/swagger-ui/#/currency-controller
+https://tiresome-part-production.up.railway.app/swagger-ui/#
 ```
 ![User Document](src/images/swagger.PNG?raw=true "Swagger")
 
