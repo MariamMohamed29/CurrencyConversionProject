@@ -1,11 +1,11 @@
-package com.finalProject.CurrencyConversionProject.web.controller;
+package com.finalProject.currencyConversionProject.web.controller;
 
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.finalProject.CurrencyConversionProject.dto.AmountConversionDto;
-import com.finalProject.CurrencyConversionProject.dto.TwoCurrenciesComparisonDto;
-import com.finalProject.CurrencyConversionProject.model.constants.Currencies;
-import com.finalProject.CurrencyConversionProject.web.response.ResponseModel;
+import com.finalProject.currencyConversionProject.dto.AmountConversionDto;
+import com.finalProject.currencyConversionProject.dto.TwoCurrenciesComparisonDto;
+import com.finalProject.currencyConversionProject.model.constants.Currencies;
+import com.finalProject.currencyConversionProject.web.response.ResponseModel;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

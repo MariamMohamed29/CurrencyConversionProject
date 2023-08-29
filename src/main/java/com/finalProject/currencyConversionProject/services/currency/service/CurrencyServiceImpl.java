@@ -1,13 +1,13 @@
-package com.finalProject.CurrencyConversionProject.services.currency.service;
+package com.finalProject.currencyConversionProject.services.currency.service;
 
-import com.finalProject.CurrencyConversionProject.dto.PairCurrenciesConversionDto;
-import com.finalProject.CurrencyConversionProject.services.CacheService;
-import com.finalProject.CurrencyConversionProject.dto.AmountConversionDto;
-import com.finalProject.CurrencyConversionProject.dto.FavoriteCurrenciesDto;
-import com.finalProject.CurrencyConversionProject.dto.TwoCurrenciesComparisonDto;
-import com.finalProject.CurrencyConversionProject.model.constants.Currencies;
-import com.finalProject.CurrencyConversionProject.services.api.service.CurrenncyApiServiceInterface;
-import com.finalProject.CurrencyConversionProject.validation.InputValidation;
+import com.finalProject.currencyConversionProject.dto.PairCurrenciesConversionDto;
+import com.finalProject.currencyConversionProject.services.CacheService;
+import com.finalProject.currencyConversionProject.dto.AmountConversionDto;
+import com.finalProject.currencyConversionProject.dto.FavoriteCurrenciesDto;
+import com.finalProject.currencyConversionProject.dto.TwoCurrenciesComparisonDto;
+import com.finalProject.currencyConversionProject.model.constants.Currencies;
+import com.finalProject.currencyConversionProject.services.api.service.CurrenncyApiServiceInterface;
+import com.finalProject.currencyConversionProject.validation.InputValidation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;

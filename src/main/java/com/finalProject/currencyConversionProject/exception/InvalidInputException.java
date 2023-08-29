@@ -1,4 +1,4 @@
-package com.finalProject.CurrencyConversionProject.exception;
+package com.finalProject.currencyConversionProject.exception;
 
 public class InvalidInputException extends RuntimeException {
     public InvalidInputException(String message) {

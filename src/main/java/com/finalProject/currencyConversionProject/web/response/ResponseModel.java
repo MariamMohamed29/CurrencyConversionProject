@@ -1,4 +1,4 @@
-package com.finalProject.CurrencyConversionProject.web.response;
+package com.finalProject.currencyConversionProject.web.response;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import lombok.Builder;

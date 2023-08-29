@@ -1,7 +1,7 @@
-package com.finalProject.CurrencyConversionProject.services.currency.service;
+package com.finalProject.currencyConversionProject.services.currency.service;
 
-import com.finalProject.CurrencyConversionProject.dto.AmountConversionDto;
-import com.finalProject.CurrencyConversionProject.dto.TwoCurrenciesComparisonDto;
+import com.finalProject.currencyConversionProject.dto.AmountConversionDto;
+import com.finalProject.currencyConversionProject.dto.TwoCurrenciesComparisonDto;
 
 import java.util.List;
 import java.util.Map;

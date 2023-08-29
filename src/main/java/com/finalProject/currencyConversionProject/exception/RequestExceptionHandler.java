@@ -1,7 +1,7 @@
-package com.finalProject.CurrencyConversionProject.exception;
+package com.finalProject.currencyConversionProject.exception;
 
-import com.finalProject.CurrencyConversionProject.model.constants.Messages;
-import com.finalProject.CurrencyConversionProject.web.response.ResponseModel;
+import com.finalProject.currencyConversionProject.model.constants.Messages;
+import com.finalProject.currencyConversionProject.web.response.ResponseModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
