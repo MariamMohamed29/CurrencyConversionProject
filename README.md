@@ -1,6 +1,17 @@
 # CurrencyConversionProject
 This is a sample Java / Maven / Spring Boot (version 2.7.14) application that aims to  provide users with real-time and accurate currency
 conversion rates using Google's open APIs.
+## About the Service
+
+The service is just a simple currencies conversion REST service.You can use this sample service to understand the conversion and comparison between currencies.
+Her is the services that application contains:
+1- Enable user to convert between amount of money from one base currency to another target currency he needs.
+
+2- Enable User to compare between amount of money of one base Currency to another pair Currencies at the same time.
+
+3- Enable user to get the conversion rates of his favorite currencies.
+
+4- Enable user to get All suppoted currencies.
 ## Adding the dependency
  
 If you are using Maven, add the following dependency.  
