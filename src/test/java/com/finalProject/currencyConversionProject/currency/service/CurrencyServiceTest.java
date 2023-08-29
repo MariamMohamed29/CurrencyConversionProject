@@ -10,7 +10,7 @@ import com.finalProject.currencyConversionProject.dto.AmountConversionDto;
 import com.finalProject.currencyConversionProject.dto.FavoriteCurrenciesDto;
 import com.finalProject.currencyConversionProject.dto.TwoCurrenciesComparisonDto;
 import com.finalProject.currencyConversionProject.model.constants.Currencies;
-import com.finalProject.currencyConversionProject.validation.InputValidation2;
+import com.finalProject.currencyConversionProject.validation.InputValidation;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
@@ -32,7 +32,7 @@ class CurrencyServiceTest {
     @Mock
     private CurrenncyApiServiceInterface currenncyApiService;
     @Mock
-    private InputValidation2 inputValidation2;
+    private InputValidation inputValidation;
     @Mock
     private CacheService cacheService;
     @InjectMocks

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
-public class RequestExceptionHandler1 {
+public class RequestExceptionHandler {
     @ExceptionHandler(value = {InvalidInputException.class})
     public ResponseEntity<Object> handleRequestException(InvalidInputException e){
 
