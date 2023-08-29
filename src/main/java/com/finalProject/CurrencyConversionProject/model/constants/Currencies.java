@@ -9,17 +9,17 @@ import java.util.Map;
 @Getter
 
 public enum Currencies {
-    EUR("EUR","Europe Union","https://flagcdn.com/32x24/eu.png"),
-    USD("USD","United States","https://flagsapi.com/US/flat/64.png"),
-    GBP("GBP","England","https://flagsapi.com/GB/flat/64.png"),
-    AED("AED","The United Arab Emirates","https://flagsapi.com/AE/flat/64.png"),
-    BHD("BHD","Bahrain","https://flagsapi.com/BH/flat/64.png"),
-    JPY("JPY","Japan","https://flagsapi.com/JP/flat/64.png"),
-    KWD("KWD","Kuwait","https://flagsapi.com/KW/flat/64.png"),
-    OMR("OMR","Oman","https://flagsapi.com/OM/flat/64.png"),
-    QAR("QAR","QATARI","https://flagsapi.com/QA/flat/64.png"),
-    SAR("SAR","Saudi","https://flagsapi.com/SA/flat/64.png"),
-    EGP("EGP","EGYPT","https://flagsapi.com/EG/flat/64.png")
+    EUR("EUR","Europe Union","https://flagcdn.com/w80/eu.png"),
+    USD("USD","United States","https://flagcdn.com/w80/us.png"),
+    GBP("GBP","England","https://flagcdn.com/w80/gb.png"),
+    AED("AED","The United Arab Emirates","https://flagcdn.com/w80/ae.png"),
+    BHD("BHD","Bahrain","https://flagcdn.com/w80/bh.png"),
+    JPY("JPY","Japan","https://flagcdn.com/w80/jp.png"),
+    KWD("KWD","Kuwait","https://flagcdn.com/w80/kw.png"),
+    OMR("OMR","Oman","https://flagcdn.com/w80/om.png"),
+    QAR("QAR","QATARI","https://flagcdn.com/w80/qa.png"),
+    SAR("SAR","Saudi","https://flagcdn.com/w80/sa.png"),
+    EGP("EGP","EGYPT","https://flagcdn.com/w80/eg.png")
     ;
 
     private String code;
