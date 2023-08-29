@@ -1,6 +1,7 @@
 package com.finalProject.CurrencyConversionProject.currencyService;
 import com.finalProject.CurrencyConversionProject.dto.PairCurrenciesConversionDto;
 import com.finalProject.CurrencyConversionProject.exception.InvalidInputException;
+import com.finalProject.CurrencyConversionProject.model.constants.Messages;
 import com.finalProject.CurrencyConversionProject.services.CacheService;
 import com.finalProject.CurrencyConversionProject.services.apiService.CurrenncyApiServiceInterface;
 import com.finalProject.CurrencyConversionProject.services.currencyService.serviceImpl.CurrencyServiceImpl;
@@ -60,32 +61,45 @@ class CurrencyServiceTest {
         Assertions.assertThat(response).isNotNull();
         Assertions.assertThat(response.getConversion_result()).isEqualTo(amountConversionDto.getConversion_result());
     }
+
     @DisplayName("JUnit test for InvalidConvertAmount method")
     @Test()
     void givenInvalidBaseOrInvalidTargetAndAmount_whenConvertAmount_thenTrowInvalidInputException() {
         String base = "gsu";
         String target = "vsl";
         Double amount = 1.0;
-        InvalidInputException invalidInputException= new InvalidInputException("Invalid currency");
+        InvalidInputException invalidInputException= new InvalidInputException(Messages.UNSUPPORTED_CURRENCY);
+
         when(currenncyApiService.convertAmount(base, target, amount)).thenThrow(invalidInputException);
-        InvalidInputException invalidInputException1= org.junit.jupiter.api.Assertions.assertThrows(InvalidInputException.class, () -> currencyService.convertAmount(base,target,amount));
-        String expectedMessage = "Invalid currency";
+
+        InvalidInputException invalidInputException1= org.junit.jupiter.api.Assertions.assertThrows(InvalidInputException.class,
+                () -> currencyService.convertAmount(base,target,amount));
+
+        String expectedMessage = Messages.UNSUPPORTED_CURRENCY;
         String actualMessage=invalidInputException1.getMessage();
+
         org.junit.jupiter.api.Assertions.assertTrue(actualMessage.contains(expectedMessage));
     }
+
     @DisplayName("JUnit test for InvalidConvertAmount method")
     @Test()
     void givenBaseAndTargetAndInvalidAmount_whenConvertAmount_thenTrowInvalidInputException() {
         String base = "USD";
         String target = "USd";
         Double amount = -1.0;
-        InvalidInputException invalidInputException= new InvalidInputException("Invalid amount");
+        InvalidInputException invalidInputException= new InvalidInputException(Messages.INVALID_AMOUNT);
+
         when(currenncyApiService.convertAmount(base, target, amount)).thenThrow(invalidInputException);
-        InvalidInputException invalidInputException1= org.junit.jupiter.api.Assertions.assertThrows(InvalidInputException.class, () -> currencyService.convertAmount(base,target,amount));
-        String expectedMessage = "Invalid amount";
+
+        InvalidInputException invalidInputException1= org.junit.jupiter.api.Assertions.assertThrows(InvalidInputException.class,
+                () -> currencyService.convertAmount(base,target,amount));
+
+        String expectedMessage = Messages.INVALID_AMOUNT;
         String actualMessage=invalidInputException1.getMessage();
+
         org.junit.jupiter.api.Assertions.assertTrue(actualMessage.contains(expectedMessage));
     }
+
     @DisplayName("JUnit test for compareCurrencies method")
     @Test
     void givenBaseAndListOfFavoriteCurrencies_whenCompareCurrencies_thenReturnFavoriteCurrenciesDto() {

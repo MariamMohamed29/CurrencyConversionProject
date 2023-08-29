@@ -1,5 +1,6 @@
 package com.finalProject.CurrencyConversionProject.exception;
 
+import com.finalProject.CurrencyConversionProject.model.constants.Messages;
 import com.finalProject.CurrencyConversionProject.web.response.ResponseModel;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,8 +12,10 @@ public class RequestExceptionHandler {
     @ExceptionHandler(value = {InvalidInputException.class})
     public ResponseEntity<Object> handleRequestException(InvalidInputException e){
 
-        ResponseModel model = ResponseModel.builder().message(e.getMessage())
-                .statusCode(HttpStatus.BAD_REQUEST.value()).build();
+        ResponseModel model = ResponseModel.builder()
+                .status(Messages.ERROR_STATUS)
+                .message(e.getMessage())
+                .build();
 
         return new ResponseEntity<>(model, HttpStatus.BAD_REQUEST);
     }
@@ -20,8 +23,10 @@ public class RequestExceptionHandler {
     @ExceptionHandler(value = {RuntimeException.class})
     public ResponseEntity<Object> handleRequestException(RuntimeException e){
 
-        ResponseModel model = ResponseModel.builder().message(e.getMessage())
-                .statusCode(HttpStatus.BAD_REQUEST.value()).build();
+        ResponseModel model = ResponseModel.builder()
+                .status(Messages.ERROR_STATUS)
+                .message(e.getMessage())
+                .build();
 
         return new ResponseEntity<>(model, HttpStatus.BAD_REQUEST);
     }
