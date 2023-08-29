@@ -92,6 +92,11 @@ Once the application runs you should see something like this
 2023-08-29 04:54:50.325  INFO 14096 --- [           main] f.C.CurrencyConversionProjectApplication : Started CurrencyConversionProjectApplication in 6.646 seconds (JVM running for 7.43)
 
 ```
+## Get information about system health.
+
+```
+http://localhost:8080/actuator/health
+```
 
 
 
