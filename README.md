@@ -87,7 +87,7 @@ Once the application runs you should see something like this
 If you want to access the app you can use the following base url
 ### base_url
 ```
-https://currencyconversionproject-production.up.railway.app/
+tiresome-part-production.up.railway.app
 ```
 ## Swagger.
 I have been using Swagger to document API in Spring project and it worked pretty well.
