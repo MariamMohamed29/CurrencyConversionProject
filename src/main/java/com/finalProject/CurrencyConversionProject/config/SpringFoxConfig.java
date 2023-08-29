@@ -12,25 +12,24 @@ import springfox.documentation.spring.web.plugins.Docket;
 
 @Configuration
 public class SpringFoxConfig {
-   @Bean
-   public Docket api() {
-       return new Docket(DocumentationType.SWAGGER_2)
-               .select()
-//                .apis(RequestHandlerSelectors.any())
-               .apis(RequestHandlerSelectors.basePackage("com/finalProject/CurrencyConversionProject/CurrencyConversionProjectApplication.java"))
-               .paths(PathSelectors.any())
-               .build()
-               .apiInfo(metaData());
-   }
+    @Bean
+    public Docket api() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("com.finalProject.CurrencyConversionProject.web.controller"))
+                .paths(PathSelectors.any())
+                .build()
+                .apiInfo(metaData());
+    }
 
-   private ApiInfo metaData() {
-       return new ApiInfoBuilder()
-               .title("Spring Boot REST API")
-               .description("\"Spring Boot REST API for Online Store\"")
-               .version("1.0.0")
-               .license("Apache License Version 2.0")
-               .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
-               .contact(new Contact("John Thompson", "http://springframework.guru/about/", "john@springfrmework.guru"))
-               .build();
-   }
+    private ApiInfo metaData() {
+        return new ApiInfoBuilder()
+                .title("Spring Boot REST API")
+                .description("\"Spring Boot REST API for Online Store\"")
+                .version("1.0.0")
+                .license("Apache License Version 2.0")
+                .licenseUrl("https://www.apache.org/licenses/LICENSE-2.0\"")
+                .contact(new Contact("John Thompson", "http://springframework.guru/about/", "john@springfrmework.guru"))
+                .build();
+    }
 }
