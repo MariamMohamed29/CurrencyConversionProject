@@ -97,6 +97,13 @@ Once the application runs you should see something like this
 ```
 http://localhost:8080/actuator/health
 ```
+## Deploying the application on Railway.
+If you want to access the app you can use the following base url
+#### base_url
+```
+https://currencyconversionproject-production.up.railway.app/
+```
+
 
 
 
