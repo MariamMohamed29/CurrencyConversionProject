@@ -106,7 +106,7 @@ I have been using Swagger to document API in Spring project and it worked pretty
 https://currencyconversionproject-production.up.railway.app/swagger-ui/#/currency-controller
 
 ```
-![User Document](src/images/swagger.png?raw=true "Swagger")
+![User Document](src/images/swagger.PNG?raw=true "Swagger")
 
 
 
