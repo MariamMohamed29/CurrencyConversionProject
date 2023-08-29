@@ -92,7 +92,7 @@ Body : [
 ```
 // For example : we have USD and 3 currencies as favorites : EGP, EUR, SAR
 
-POST : localhost:8080/comparison
+POST : localhost:8080/favorite-currencies
 	?base=USD
 
 Body : [
@@ -106,13 +106,12 @@ Body : [
 ```
 {
     "statusCode": 200,
-    "data": {
-        "conversion_rates": {
-            "EUR": 0.9262,
-            "SAR": 3.75,
-            "EGP": 30.9015
-        }
-    }
+    "status": "success",
+    "data": [
+        30.9,
+        0.9248,
+        3.75
+    ]
 }
 ```
 
