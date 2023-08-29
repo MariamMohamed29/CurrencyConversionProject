@@ -1,5 +1,6 @@
 # CurrencyConversionProject
-This is a back-end currency conversion project 
+This is a sample Java / Maven / Spring Boot (version 2.7.14) application that aims to  provide users with real-time and accurate currency
+conversion rates using Google's open APIs.
 
 ## Architecture of Currency Conversion API
 
