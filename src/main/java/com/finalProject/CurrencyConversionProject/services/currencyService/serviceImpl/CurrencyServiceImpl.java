@@ -54,16 +54,11 @@ public class CurrencyServiceImpl implements CurrencyServiceInterface {
 
         FavoriteCurrenciesDto responseObject = this.currenncyApiService.compareCurrencies(base);
 
-        Map<String ,Double> finalResponseMap = new HashMap<>();
         Map<String, Double> responseMap = responseObject.getConversion_rates();
 
-        currencies.stream().forEach(currency -> finalResponseMap.put(currency, responseMap.get(currency)));
 
-//        FavoriteCurrenciesDto finalResponseObject = FavoriteCurrenciesDto.builder()
-//                .conversion_rates(finalResponseMap)
-//                .build();
         List<Double> finalResponseObject = new ArrayList<>();
-        currencies.stream().forEach(currency -> finalResponseObject.add(finalResponseMap.get(currency)));
+        currencies.stream().forEach(currency -> finalResponseObject.add(responseMap.get(currency)));
 
         return finalResponseObject;
     }
