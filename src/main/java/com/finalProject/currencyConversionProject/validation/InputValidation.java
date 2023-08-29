@@ -1,9 +1,9 @@
-package com.finalProject.currencyConversionProject.validation;
+package com.finalProject.CurrencyConversionProject.validation;
 
-import com.finalProject.currencyConversionProject.exception.InvalidInputException;
-import com.finalProject.currencyConversionProject.model.constants.Currencies;
+import com.finalProject.CurrencyConversionProject.exception.InvalidInputException;
+import com.finalProject.CurrencyConversionProject.model.constants.Currencies;
 
-import com.finalProject.currencyConversionProject.model.constants.Messages;
+import com.finalProject.CurrencyConversionProject.model.constants.Messages;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

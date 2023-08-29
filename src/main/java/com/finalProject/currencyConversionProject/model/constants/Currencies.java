@@ -1,4 +1,4 @@
-package com.finalProject.currencyConversionProject.model.constants;
+package com.finalProject.CurrencyConversionProject.model.constants;
 
 import lombok.Getter;
 

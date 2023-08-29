@@ -1,4 +1,4 @@
-package com.finalProject.currencyConversionProject.dto;
+package com.finalProject.CurrencyConversionProject.dto;
 
 import lombok.Builder;
 import lombok.Getter;

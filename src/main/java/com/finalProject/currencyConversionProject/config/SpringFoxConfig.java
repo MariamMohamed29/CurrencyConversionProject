@@ -1,4 +1,4 @@
-package com.finalProject.currencyConversionProject.config;
+package com.finalProject.CurrencyConversionProject.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

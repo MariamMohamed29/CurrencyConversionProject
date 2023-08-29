@@ -1,4 +1,4 @@
-package com.finalProject.currencyConversionProject.services;
+package com.finalProject.CurrencyConversionProject.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.CacheManager;

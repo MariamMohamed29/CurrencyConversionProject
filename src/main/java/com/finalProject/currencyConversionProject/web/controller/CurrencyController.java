@@ -1,10 +1,10 @@
-package com.finalProject.currencyConversionProject.web.controller;
+package com.finalProject.CurrencyConversionProject.web.controller;
 
-import com.finalProject.currencyConversionProject.model.constants.Messages;
-import com.finalProject.currencyConversionProject.services.currency.service.CurrencyServiceImpl;
-import com.finalProject.currencyConversionProject.dto.AmountConversionDto;
-import com.finalProject.currencyConversionProject.dto.TwoCurrenciesComparisonDto;
-import com.finalProject.currencyConversionProject.web.response.ResponseModel;
+import com.finalProject.CurrencyConversionProject.model.constants.Messages;
+import com.finalProject.CurrencyConversionProject.services.currency.service.CurrencyServiceImpl;
+import com.finalProject.CurrencyConversionProject.dto.AmountConversionDto;
+import com.finalProject.CurrencyConversionProject.dto.TwoCurrenciesComparisonDto;
+import com.finalProject.CurrencyConversionProject.web.response.ResponseModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
