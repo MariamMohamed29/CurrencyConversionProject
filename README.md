@@ -99,9 +99,16 @@ http://localhost:8080/actuator/health
 ```
 ## Deploying the application on Railway.
 If you want to access the app you can use the following base url
-#### base_url
+### base_url
 ```
 https://currencyconversionproject-production.up.railway.app/
+```
+## Swagger.
+I have been using Swagger to document API in Spring project and it worked pretty well.
+### How to run
+```
+https://currencyconversionproject-production.up.railway.app/swagger-ui/#/currency-controller
+
 ```
 
 
