@@ -5,11 +5,6 @@ conversion rates using Google's open APIs.
  
 If you are using Maven, add the following dependency.  
 
-```xml
-### Adding the dependency
-
-"orika-spring-boot-starter" is published on Maven Central Repository.  
-If you are using Maven, add the following dependency.  
 
 ```xml
 <dependencies>
@@ -84,7 +79,7 @@ If you are using Maven, add the following dependency.
 
 	</dependencies>
 ```
-```
+
 
 ## Architecture of Currency Conversion API
 
