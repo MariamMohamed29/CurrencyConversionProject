@@ -1,5 +1,6 @@
 package com.finalProject.CurrencyConversionProject.web.controller;
 
+import com.finalProject.CurrencyConversionProject.model.constants.Messages;
 import com.finalProject.CurrencyConversionProject.services.currencyService.serviceImpl.CurrencyServiceImpl;
 import com.finalProject.CurrencyConversionProject.dto.AmountConversionDto;
 import com.finalProject.CurrencyConversionProject.dto.FavoriteCurrenciesDto;
@@ -25,7 +26,7 @@ public class CurrencyController {
         AmountConversionDto response =  this.currencyService.convertAmount(base, target, amount);
         ResponseModel<AmountConversionDto> model = ResponseModel.<AmountConversionDto>builder()
                 .data(response)
-                .status("success")
+                .status(Messages.SUCCESS_STATUS)
                 .statusCode(HttpStatus.OK.value()).build();
         return new ResponseEntity(model, HttpStatus.OK);
     }
@@ -33,13 +34,12 @@ public class CurrencyController {
     @PostMapping("/favorite-currencies")
     public ResponseEntity<ResponseModel<?>> getConversionRates(@RequestBody List<String>currencies,
                                                                @RequestParam(value = "base",required = false, defaultValue = "USD") String base){
-//        FavoriteCurrenciesDto response =  this.currencyService.compareCurrencies(currencies,base);
         List<Double> response = this.currencyService.compareCurrencies(currencies,base);
 
         ResponseModel<List<Double>> model = ResponseModel.<List<Double>>builder()
                 .data(response)
                 .statusCode(HttpStatus.OK.value())
-                .status("success")
+                .status(Messages.SUCCESS_STATUS)
                 .build();
 
         return new ResponseEntity(model, HttpStatus.OK);
@@ -54,7 +54,7 @@ public class CurrencyController {
         ResponseModel<TwoCurrenciesComparisonDto> model = ResponseModel.<TwoCurrenciesComparisonDto>builder()
                 .data(response)
                 .statusCode(HttpStatus.OK.value())
-                .status("success")
+                .status(Messages.SUCCESS_STATUS)
                 .build();
         return new ResponseEntity(model, HttpStatus.OK);
     }
@@ -65,7 +65,7 @@ public class CurrencyController {
         ResponseModel<List<Map<String, String>>> model = ResponseModel.<List<Map<String, String>>>builder()
                 .data(currencies)
                 .statusCode(HttpStatus.OK.value())
-                .status("success")
+                .status(Messages.SUCCESS_STATUS)
                 .build();
         return new ResponseEntity(model, HttpStatus.OK);
     }

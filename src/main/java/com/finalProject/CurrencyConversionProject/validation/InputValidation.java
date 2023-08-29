@@ -3,6 +3,7 @@ package com.finalProject.CurrencyConversionProject.validation;
 import com.finalProject.CurrencyConversionProject.exception.InvalidInputException;
 import com.finalProject.CurrencyConversionProject.model.constants.Currencies;
 
+import com.finalProject.CurrencyConversionProject.model.constants.Messages;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -18,18 +19,18 @@ public class InputValidation {
             }
         }
         if(!flag){
-            throw new InvalidInputException("Invalid Currency");
+            throw new InvalidInputException(Messages.UNSUPPORTED_CURRENCY);
         }
     }
     public void checkAmount(Double amount){
         if(amount < 0){
-            throw new InvalidInputException("Invalid amount");
+            throw new InvalidInputException(Messages.INVALID_AMOUNT);
         }
     }
     public void checkList(List<String> currencies, Integer size){
         if(currencies.size() != size){
-            throw new InvalidInputException("Invalid size");
+            throw new InvalidInputException(Messages.INVALID_SIZE);
         }
-        currencies.stream().forEach(currrecy -> this.checkCurrency(currrecy));
+        currencies.stream().forEach(cur -> this.checkCurrency(cur));
     }
 }
