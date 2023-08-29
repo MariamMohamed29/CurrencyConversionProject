@@ -16,7 +16,7 @@ public class SpringFoxConfig {
     public Docket api() {
         return new Docket(DocumentationType.SWAGGER_2)
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.finalProject.currencyConversionProject.web.controller"))
+                .apis(RequestHandlerSelectors.basePackage("com.finalProject.currencyConversion.web.controller"))
                 .paths(PathSelectors.any())
                 .build()
                 .apiInfo(metaData());
