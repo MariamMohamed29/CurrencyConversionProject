@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
 @ControllerAdvice
-public class RequestExceptionHandler {
+public class RequestExceptionHandler1 {
     @ExceptionHandler(value = {InvalidInputException.class})
-    public ResponseEntity<Object> handleRequestException(InvalidInputException e) {
+    public ResponseEntity<Object> handleRequestException(InvalidInputException e){
 
         ResponseModel model = ResponseModel.builder()
                 .status(Messages.ERROR_STATUS)
@@ -21,18 +21,7 @@ public class RequestExceptionHandler {
     }
 
     @ExceptionHandler(value = {RuntimeException.class})
-    public ResponseEntity<Object> handleRequestException(RuntimeException e) {
-
-        ResponseModel model = ResponseModel.builder()
-                .status(Messages.ERROR_STATUS)
-                .message(e.getMessage())
-                .build();
-
-        return new ResponseEntity<>(model, HttpStatus.BAD_REQUEST);
-    }
-
-    @ExceptionHandler(value = {Exception.class})
-    public ResponseEntity<Object> handleRequestException(Exception e) {
+    public ResponseEntity<Object> handleRequestException(RuntimeException e){
 
         ResponseModel model = ResponseModel.builder()
                 .status(Messages.ERROR_STATUS)

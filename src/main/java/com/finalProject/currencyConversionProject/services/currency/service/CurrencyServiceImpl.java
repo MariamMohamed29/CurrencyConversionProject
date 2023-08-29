@@ -7,7 +7,7 @@ import com.finalProject.currencyConversionProject.dto.FavoriteCurrenciesDto;
 import com.finalProject.currencyConversionProject.dto.TwoCurrenciesComparisonDto;
 import com.finalProject.currencyConversionProject.model.constants.Currencies;
 import com.finalProject.currencyConversionProject.services.api.service.CurrenncyApiServiceInterface;
-import com.finalProject.currencyConversionProject.validation.InputValidation;
+import com.finalProject.currencyConversionProject.validation.InputValidation2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
@@ -18,7 +18,7 @@ import java.util.stream.Collectors;
 @Service
 public class CurrencyServiceImpl implements CurrencyServiceInterface {
     @Autowired
-    private InputValidation inputValidation;
+    private InputValidation2 inputValidation2;
     @Autowired
     private CurrenncyApiServiceInterface currenncyApiService;
     @Autowired
@@ -31,9 +31,9 @@ public class CurrencyServiceImpl implements CurrencyServiceInterface {
 
         this.convertToUpperCase(base, target);
 
-        this.inputValidation.checkCurrency(base);
-        this.inputValidation.checkCurrency(target);
-        this.inputValidation.checkAmount(amount);
+        this.inputValidation2.checkCurrency(base);
+        this.inputValidation2.checkCurrency(target);
+        this.inputValidation2.checkAmount(amount);
 
         PairCurrenciesConversionDto pairCurrenciesConversionDto = this.currenncyApiService.convertAmount(base, target, amount);
         Double conversionResult = amount * pairCurrenciesConversionDto.getConversion_rate();
@@ -48,8 +48,8 @@ public class CurrencyServiceImpl implements CurrencyServiceInterface {
 
         List<String> currencies = this.convertToUpperCase(favoriteCurrencies, base);
 
-        this.inputValidation.checkList(currencies, currencies.size());
-        this.inputValidation.checkCurrency(base);
+        this.inputValidation2.checkList(currencies, currencies.size());
+        this.inputValidation2.checkCurrency(base);
 
         FavoriteCurrenciesDto responseObject = this.currenncyApiService.compareCurrencies(base);
 
@@ -75,10 +75,10 @@ public class CurrencyServiceImpl implements CurrencyServiceInterface {
 
         this.convertToUpperCase(base, target1, target2);
 
-        this.inputValidation.checkCurrency(base);
-        this.inputValidation.checkAmount(amount);
-        this.inputValidation.checkCurrency(target1);
-        this.inputValidation.checkCurrency(target2);
+        this.inputValidation2.checkCurrency(base);
+        this.inputValidation2.checkAmount(amount);
+        this.inputValidation2.checkCurrency(target1);
+        this.inputValidation2.checkCurrency(target2);
 
         AmountConversionDto response1 = this.convertAmount(base, target1, amount);
         AmountConversionDto response2 = this.convertAmount(base, target2, amount);
