@@ -79,6 +79,20 @@ If you are using Maven, add the following dependency.
 
 	</dependencies>
 ```
+## Steps to run
+1. Build the project using
+  `mvn clean install`
+2. Make sure you are using JDK 18 and Maven 2.x
+3. Run using `mvn spring-boot:run`
+4. The web application is accessible via localhost:8080## Steps to run
+Once the application runs you should see something like this
+
+```
+2023-08-29 04:54:49.833  INFO 14096 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-08-29 04:54:50.325  INFO 14096 --- [           main] f.C.CurrencyConversionProjectApplication : Started CurrencyConversionProjectApplication in 6.646 seconds (JVM running for 7.43)
+
+```
+
 
 
 ## Architecture of Currency Conversion API
